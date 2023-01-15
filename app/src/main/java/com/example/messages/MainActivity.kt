@@ -11,5 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mbinging = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.buttonSend.setOnClickListener {
+
+        }
     }
 }
