@@ -11,6 +11,9 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+    repositories {
+        maven { url "https://repo.sendbird.com/public/maven" }
+    }
 }
 rootProject.name = "Messages"
 include ':app'

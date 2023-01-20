@@ -19,7 +19,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recycler_gchat"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constrainedHeight="true"
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#E0E0E0"
-        app:layout_constraintBottom_toBottomOf="@+id/recyclerView" />
+        app:layout_constraintBottom_toBottomOf="@+id/recycler_gchat" />
     <RelativeLayout
         android:id="@+id/layout_chatbox"
         android:layout_width="match_parent"

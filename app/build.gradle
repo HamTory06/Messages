@@ -37,6 +37,10 @@ android {
 
 dependencies {
 
+    implementation 'com.sendbird.sdk:sendbird-android-sdk:3.1.22'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
