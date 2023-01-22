@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/friend"
+        android:icon="@drawable/ic_person_1"
+        android:title="친구"
+        android:enabled="true"/>
+    <item
+        android:id="@+id/message"
+        android:icon="@drawable/ic_message"
+        android:title="메시지"
+        android:enabled="true"/>
+</menu>
