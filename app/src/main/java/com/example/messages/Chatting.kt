@@ -35,7 +35,7 @@ class Chatting : Fragment() {
         binding.recyclerView.adapter = adapter
         binding.fab.setOnClickListener {
             Log.d("상태","클릭")
-            val profile = Profile("${datas!!.size}")
+            val profile = Profile("${datas!!.size}","${datas!!.size}")
             datas!!.add(profile)
             binding.recyclerView.adapter?.notifyDataSetChanged()
         }

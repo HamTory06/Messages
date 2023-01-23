@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <item
-        android:id="@+id/search"
-        android:icon="@drawable/ic_menu_search"
-        android:title="검색"
-        app:showAsAction="always" />
+        android:id="@+id/backwards"
+        android:icon="@drawable/ic_backwards"
+        android:title="뒤로가기"
+        app:showAsAction="always"/>
     <item
         android:id="@+id/settings"
         android:icon="@drawable/ic_menu_profile_settings"
         android:title="설정"
         app:showAsAction="always"/>
+
 </menu>
