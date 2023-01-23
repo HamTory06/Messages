@@ -1,21 +1,13 @@
 package com.example.messages
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
-import androidx.core.app.TaskStackBuilder
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.fragment.app.FragmentManager
 import com.example.messages.databinding.ActivityMainBinding
-import com.sendbird.android.*
-import com.sendbird.android.SendBird.ChannelHandler
 
 class MainActivity : AppCompatActivity() {
-    var datas: MutableList<String> ?= null
-    lateinit var adapter: Adapter
 
     private var mbinding: ActivityMainBinding ?= null
     private val binding get() = mbinding!!
@@ -24,14 +16,28 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mbinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val layoutManager = LinearLayoutManager(this)
-        binding.recyclerView.layoutManager = layoutManager
-        adapter = Adapter(datas)
-        binding.recyclerView.adapter = adapter
+
+        val fragmentManager: FragmentManager = supportFragmentManager
+        binding.bottomnavigation.setOnItemReselectedListener { item ->
+            when(item.itemId){
+                R.id.friend -> {
+                    Log.d("상태","friend")
+                    fragmentManager.beginTransaction().replace(R.id.Fragment, Chatting()).commit()
+                    Chatting()
+                }
+                R.id.message -> {
+                    Log.d("상태", "message")
+                    fragmentManager.beginTransaction().replace(R.id.Fragment, Person()).commit()
+                    Person()
+                }
+            }
+            true
+        }
+        binding.bottomnavigation.selectedItemId = R.id.friend
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.toolbar_menu,menu)
+        menuInflater.inflate(R.menu.chatting_toolbar_menu,menu)
         return super.onCreateOptionsMenu(menu)
     }
 }
