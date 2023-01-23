@@ -7,6 +7,7 @@
     tools:context=".Chatting"
     android:orientation="vertical">
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/Appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <androidx.appcompat.widget.Toolbar
@@ -18,10 +19,12 @@
             app:titleTextColor="@color/white"
             app:menu="@menu/chatting_toolbar_menu"/>
     </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Appbar"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"

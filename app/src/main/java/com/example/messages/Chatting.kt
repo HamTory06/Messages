@@ -18,12 +18,8 @@ class Chatting : Fragment() {
     private var mbinding: FragmentChattingBinding ?= null
     private val binding get() = mbinding!!
 
-    var datas: MutableList<String> ?= null
+    private val datas =  arrayListOf<Profile>()
     lateinit var adapter: Adapter
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
 
     override fun onCreateView(
@@ -38,8 +34,10 @@ class Chatting : Fragment() {
         adapter = Adapter(datas)
         binding.recyclerView.adapter = adapter
         binding.fab.setOnClickListener {
-            datas?.add("${datas!!.size}")
-
+            Log.d("상태","클릭")
+            val profile = Profile("${datas!!.size}")
+            datas!!.add(profile)
+            binding.recyclerView.adapter?.notifyDataSetChanged()
         }
         return binding.root
     }
