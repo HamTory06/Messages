@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/friend"
-        android:icon="@drawable/ic_person_1"
+        android:icon="@drawable/navigation_menu_selector_person"
         android:title="친구"
         android:enabled="true"/>
     <item
         android:id="@+id/message"
-        android:icon="@drawable/ic_message"
+        android:icon="@drawable/navigation_menu_selector_message"
         android:title="메시지"
         android:enabled="true"/>
 </menu>
