@@ -1,5 +1,6 @@
 package com.example.messages
 
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -30,13 +31,16 @@ class Chatting : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.d("Chatting_상태","onCreateView")
-//        val layoutManager = LinearLayoutManager(context)
-//        binding.recyclerView.layoutManager = layoutManager
-//        adapter = Adapter(datas)
-//        binding.recyclerView.adapter = adapter
-        (activity as AppCompatActivity?)!!.title = "채팅"
         mbinding = FragmentChattingBinding.inflate(inflater, container, false)
+        Log.d("상태","Chatting")
+        val layoutManager = LinearLayoutManager(context)
+        binding.recyclerView.layoutManager = layoutManager
+        adapter = Adapter(datas)
+        binding.recyclerView.adapter = adapter
+        binding.fab.setOnClickListener {
+            datas?.add("${datas!!.size}")
+
+        }
         return binding.root
     }
 

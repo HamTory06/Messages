@@ -1,5 +1,6 @@
 package com.example.messages
 
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -20,10 +21,14 @@ class Person : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.d("Person_상태","onCreateView")
-        (activity as AppCompatActivity)?.title = "친구"
         mbinding = FragmentPersonBinding.inflate(inflater, container, false)
+        Log.d("상태","Person")
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        mbinding = null
     }
 
 }

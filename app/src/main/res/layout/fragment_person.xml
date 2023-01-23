@@ -12,6 +12,8 @@
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:title="친구"
+            app:titleTextColor="@color/white"
             android:background="#000000"
             app:menu="@menu/person_toolbar_menu"/>
     </com.google.android.material.appbar.AppBarLayout>
