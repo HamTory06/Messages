@@ -18,7 +18,7 @@ class Chatting : Fragment() {
     private var mbinding: FragmentChattingBinding ?= null
     private val binding get() = mbinding!!
 
-    private val datas =  arrayListOf<Profile>()
+    private val datas =  arrayListOf<profiledata>()
     lateinit var adapter: Adapter
 
 
@@ -34,8 +34,8 @@ class Chatting : Fragment() {
         adapter = Adapter(datas)
         binding.recyclerView.adapter = adapter
         binding.fab.setOnClickListener {
-            Log.d("상태","클릭")
-            val profile = Profile("${datas!!.size}","${datas!!.size}")
+//            Log.d("상태","클릭")
+            val profile = profiledata("${datas!!.size}","${datas!!.size}")
             datas!!.add(profile)
             binding.recyclerView.adapter?.notifyDataSetChanged()
         }

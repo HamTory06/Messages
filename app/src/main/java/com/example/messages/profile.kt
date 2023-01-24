@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.messages.databinding.FragmentProfileBinding
 
-class profile : Fragment() {
+class Profile : Fragment() {
 
     private var mbinding: FragmentProfileBinding ?= null
     private val binding get() = mbinding!!
