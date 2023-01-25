@@ -14,6 +14,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical|start"
-            app:menu="@menu/person_toolbar_menu"/>
+            app:menu="@menu/profile_toolbar_menu"/>
     </com.google.android.material.appbar.AppBarLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Profile Activity"
+        android:textSize="100dp"
+        android:gravity="center"/>
 </RelativeLayout>
