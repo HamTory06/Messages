@@ -18,7 +18,7 @@ class Chatting : Fragment() {
     private val binding get() = mbinding!!
 
     private val datas =  arrayListOf<profiledata>()
-    lateinit var adapter: Adapter
+    lateinit var adapter: PersonAdapter
 
 
     override fun onCreateView(
@@ -29,23 +29,19 @@ class Chatting : Fragment() {
         mbinding = FragmentChattingBinding.inflate(inflater, container, false)
         Log.d("상태","Chatting")
         val layoutManager = LinearLayoutManager(context)
-        binding.recyclerView.layoutManager = layoutManager
-        adapter = Adapter(datas)
-        binding.recyclerView.adapter = adapter
-        binding.recyclerView.addItemDecoration(DividerItemDecoration(activity,DividerItemDecoration.VERTICAL))
+        binding.recyclerViewChatting.layoutManager = layoutManager
+        adapter = PersonAdapter(datas)
+        binding.recyclerViewChatting.adapter = adapter
+        binding.recyclerViewChatting.addItemDecoration(DividerItemDecoration(activity,DividerItemDecoration.VERTICAL))
         binding.fab.setOnClickListener {
 //            Log.d("상태","클릭")
             val profile = profiledata("${datas!!.size}","${datas!!.size}")
             datas!!.add(profile)
-            binding.recyclerView.adapter?.notifyDataSetChanged()
+            binding.recyclerViewChatting.adapter?.notifyDataSetChanged()
         }
         return binding.root
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.chatting_toolbar_menu, menu)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()

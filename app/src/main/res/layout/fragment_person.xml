@@ -12,9 +12,14 @@
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="친구"
+            app:title="채팅"
             app:titleTextColor="@color/white"
             android:background="#000000"
             app:menu="@menu/person_toolbar_menu"/>
     </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_Person"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 </LinearLayout>
