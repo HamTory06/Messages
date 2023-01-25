@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:background="#000000">
         <androidx.appcompat.widget.Toolbar
+            android:id="@+id/profile_Toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical|start"

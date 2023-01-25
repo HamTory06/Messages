@@ -3,9 +3,7 @@ package com.example.messages
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
@@ -42,6 +40,11 @@ class Chatting : Fragment() {
             binding.recyclerView.adapter?.notifyDataSetChanged()
         }
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.chatting_toolbar_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onDestroyView() {

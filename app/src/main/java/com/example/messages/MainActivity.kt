@@ -37,10 +37,6 @@ class MainActivity : AppCompatActivity() {
         binding.bottomnavigation.selectedItemId = R.id.friend
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.chatting_toolbar_menu,menu)
-        return super.onCreateOptionsMenu(menu)
-    }
 
     private fun replaceFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction().apply {
